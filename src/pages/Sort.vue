@@ -5,8 +5,8 @@
         <img :src="item.image"/>
         <h1 class="title">{{item.name}}</h1>
         <p class="info">
-          <span class="price">{{item.price|curreny}}</span>
-       
+          <span class="price">{{item.price|currenty}}</span>
+
         </p>
         <div style="margin-top:10px">
         	<span class="btn" style="background: red;">立即购买</span>
@@ -16,7 +16,7 @@
     </div>
     <mt-button class="more"  size="large" @click="getmore"></mt-button>
   </div>
-    
+
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
 	 	return {
 	 		id:0,
 	 		goodList:[],
-	 		
+
 	 	}
 	 },
 	 methods:{
@@ -54,12 +54,12 @@ export default {
 	 		this.getGoodData(this.id);
 	 },
 	 filters:{
-	 	curreny(value){
+	 	currenty(value){
 	 		return  "￥" +value
 	 	}
 	 },
 	 components:{
-	 	 
+
 	 }
 }
 </script>

@@ -25,16 +25,21 @@ var actions = {
 	add(state,item){
 		axios.post("/api/goods/shopcar/add",{params:item.id})
 		.then((res)=>{
-			console.log(res.data.data);
-		})
+			console.log(res.data.data)
+      console.log(res)
+		}).catch((err)=>{
+		  console.log(err)
+    })
 		state.commit("add",item);
-		
+
 	},
 	del(state,item){
 		axios.post("/api/goods/shopcar/del",{params:item.id})
 		.then((res)=>{
 			console.log(res.data.data);
-		})
+		}).catch((err)=>{
+      console.log(err)
+    })
 		state.commit("del",item.id);
 	}
 }
